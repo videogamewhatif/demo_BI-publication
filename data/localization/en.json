@@ -1,0 +1,23 @@
+{
+  "menu": {
+    "start": "Start",
+    "continue": "Continue",
+    "greeting": "Hello, {name}"
+  },
+  "game_over": "Game Over",
+  "appearance": "Appearance",
+  "audio": "Audio",
+  "language": "Language",
+  "settings": "Settings",
+  "dark_mode": "Dark Mode",
+  "master_volume": "Master Volume",
+  "music": "Music",
+  "effects": "Effects",
+  "mute_all": "Mute All",
+  "create_character": "Create character",
+  "how_are_you": "How are you?",
+  "points_free_text": "Adjust your attributes freely.",
+  "appearance_title": "APPEARANCE",
+  "audio_title": "AUDIO",
+  "language_title": "LANGUAGE"
+}

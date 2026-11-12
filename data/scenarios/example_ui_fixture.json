@@ -1,0 +1,38 @@
+{
+  "_aviso": "Este archivo es un fixture técnico para probar visualmente el pipeline StoryService -> StoryPanel -> ConsequenceService. No es contenido narrativo diseñado. Bórralo cuando exista contenido real en data/scenarios/.",
+  "title": "[Ejemplo técnico] Arco de verificación de interfaz",
+  "genre": "placeholder",
+  "setting": "placeholder",
+  "objective": "Confirmar que la interfaz muestra capítulo, escena, texto, N decisiones y efectos reales sin nada hardcodeado.",
+  "start_scene": "inicio",
+  "scenes": {
+    "inicio": {
+      "title": "[Escena de ejemplo]",
+      "text": "[PLACEHOLDER — no es narrativa real] Este texto llega desde data/scenarios/example_ui_fixture.json a través de StoryService.get_current_scene(). Sirve únicamente para comprobar que el panel central renderiza capítulo, texto y opciones de forma dinámica. Hay 3 opciones a propósito (no 2) para confirmar que la interfaz no asume un número fijo, y cada una trae 'effects' de ejemplo para probar ConsequenceService de punta a punta.",
+      "options": [
+        {"label": "[Opción de ejemplo A]", "next_scene": "final_a", "effects": {"discipline": 5, "stress": 5}},
+        {"label": "[Opción de ejemplo B]", "next_scene": "final_b", "effects": {"happiness": 8, "net_worth": -200}},
+        {"label": "[Opción de ejemplo C]", "next_scene": "final_c", "effects": {"charisma": 6, "empathy": 4}}
+      ],
+      "ending": false
+    },
+    "final_a": {
+      "text": "[PLACEHOLDER] Elegiste la opción A. Esta escena es un cierre (ending=true), para comprobar que StoryPanel muestra el estado de historia terminada.",
+      "options": [],
+      "ending": true,
+      "ending_id": "ejemplo-final-a"
+    },
+    "final_b": {
+      "text": "[PLACEHOLDER] Elegiste la opción B.",
+      "options": [],
+      "ending": true,
+      "ending_id": "ejemplo-final-b"
+    },
+    "final_c": {
+      "text": "[PLACEHOLDER] Elegiste la opción C.",
+      "options": [],
+      "ending": true,
+      "ending_id": "ejemplo-final-c"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+# Catálogo de DEFINICIONES de logro (con requisitos), igual que
+# data/events/ y data/endings/ — JSON de solo lectura, se versiona
+# normalmente. config/paths.py::ACHIEVEMENTS_DIR apunta aquí.
+# Distinto de qué logros tiene OTORGADOS un jugador concreto (eso
+# vive en services/achievement_service.py, sin catálogo a propósito).

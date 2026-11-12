@@ -1,0 +1,3 @@
+# Contenido narrativo real (finales), igual que data/scenarios/ —
+# JSON de solo lectura, se versiona normalmente. config/paths.py::ENDINGS_DIR
+# apunta aquí, pero ningún repositorio/servicio la lee todavía.

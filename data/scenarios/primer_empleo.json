@@ -1,0 +1,140 @@
+{
+  "title": "El primer empleo",
+  "genre": "drama de mayoría de edad",
+  "setting": "Una ciudad cualquiera, el año en que terminaste la escuela",
+  "objective": "Decidir qué hacer con los primeros años de tu vida adulta y aprender a vivir con esa decisión",
+  "start_scene": "graduacion",
+  "scenes": {
+    "graduacion": {
+      "title": "El día después del diploma",
+      "text": "El diploma todavía huele a tinta fresca cuando te das cuenta de que nadie te va a decir qué hacer a partir de mañana. Tu tío ya te ofreció un puesto en la ferretería. La universidad tiene una fecha límite de inscripción en tres semanas. Guardaste algo de dinero para intentar algo propio. Y una amiga te escribió: 'vente conmigo, ya veremos cómo nos las arreglamos'. Cuatro caminos, una sola vida para empezar a vivirla.",
+      "options": [
+        {"label": "Aceptar el puesto en la ferretería de tu tío", "next_scene": "trabajo_estable", "effects": {"discipline": 5, "stress": 5, "creativity": -5, "net_worth": 300}},
+        {"label": "Inscribirte a la universidad", "next_scene": "universidad", "effects": {"intelligence": 5, "stress": 10, "net_worth": -500}},
+        {"label": "Usar tus ahorros para intentar tu propio proyecto", "next_scene": "emprendimiento", "effects": {"creativity": 10, "stress": 10, "net_worth": -300}},
+        {"label": "Irte de viaje con tu amiga a ver qué surge", "next_scene": "sabatico", "effects": {"happiness": 10, "charisma": 5, "discipline": -5, "net_worth": -200}}
+      ],
+      "ending": false
+    },
+    "trabajo_estable": {
+      "title": "Ocho meses en la ferretería",
+      "text": "Ocho meses después conoces la ferretería mejor que tu propia casa: el crujido del tercer estante, el orden por el que nadie más pregunta, los clientes que ya saludan por tu nombre. Es un trabajo honesto y un sueldo seguro. Tu tío, satisfecho, te pregunta un día si quieres quedarte 'para siempre' o si tienes otros planes.",
+      "memory_moment": {"category": "hito_profesional"},
+      "options": [
+        {"label": "Proponerle modernizar el negocio a cambio de una parte de las ganancias", "next_scene": "negocio_moderno", "effects": {"discipline": 10, "reputation": 10, "stress": 10, "net_worth": 1200}},
+        {"label": "Quedarte con la rutina tal como está, sin pedir nada más", "next_scene": "rutina_comoda", "effects": {"happiness": 5, "stress": -10, "creativity": -5}},
+        {"label": "Renunciar: la estabilidad no llena lo que sentías que te faltaba", "next_scene": "renuncia_temprana", "effects": {"stress": -5, "happiness": -5, "reputation": -5, "net_worth": -200}}
+      ],
+      "ending": false
+    },
+    "universidad": {
+      "title": "El primer semestre real",
+      "text": "El campus es más grande de lo que esperabas y las cuentas más pequeñas de lo que necesitas. Entre exámenes y transferencias de tus padres que llegan tarde, aprendes rápido que 'estudiante de tiempo completo' es, casi siempre, una mentira piadosa.",
+      "options": [
+        {"label": "Dedicarte por completo a los estudios, sin distracciones", "next_scene": "graduado_exigente", "effects": {"intelligence": 20, "discipline": 10, "stress": 20, "happiness": -15, "empathy": -5}},
+        {"label": "Compaginar la carrera con un trabajo de medio tiempo", "next_scene": "equilibrio_fragil", "effects": {"intelligence": 10, "discipline": 10, "stress": 15, "net_worth": 400, "happiness": -5}},
+        {"label": "Dejar la carrera antes de terminar el segundo semestre", "next_scene": "camino_interrumpido", "effects": {"stress": -10, "happiness": -10, "reputation": -10, "discipline": -10, "net_worth": -300}}
+      ],
+      "ending": false
+    },
+    "emprendimiento": {
+      "title": "El negocio que empezó en la cocina",
+      "text": "El negocio que empezaste en la mesa de tu cocina ahora tiene clientes de verdad, un cuaderno lleno de números que no siempre cierran, y una decisión que ya no puedes seguir posponiendo: ¿qué tan lejos estás dispuesto a llevar esto?",
+      "options": [
+        {"label": "Buscar un socio inversionista que ponga el capital que te falta", "next_scene": "socio_inversionista", "effects": {"net_worth": 2000, "reputation": 10, "creativity": -10, "happiness": -5, "stress": 5}},
+        {"label": "Mantenerlo pequeño, manejable, y fiel a como lo imaginaste", "next_scene": "pequeno_pero_mio", "effects": {"happiness": 15, "creativity": 10, "net_worth": 300, "stress": -5}},
+        {"label": "Reinvertir cada peso que tienes para crecer lo más rápido posible", "next_scene": "expansion_arriesgada", "effects": {"net_worth": 800, "stress": 20, "reputation": 5, "happiness": -10, "health": -5}}
+      ],
+      "ending": false
+    },
+    "sabatico": {
+      "title": "Seis meses después del plan original",
+      "text": "El plan original era simple: unos meses, algo de dinero ahorrado, y de vuelta a casa antes de fin de año. Seis meses después sigues fuera, con menos ahorros de los que planeaste y una perspectiva de tu propia vida que no tenías cuando te fuiste.",
+      "options": [
+        {"label": "Quedarte más tiempo del planeado; ya no hay prisa por volver", "next_scene": "vida_en_el_camino", "effects": {"happiness": 15, "charisma": 10, "net_worth": -300, "discipline": -10, "reputation": -5}},
+        {"label": "Volver a tiempo, con ideas nuevas y un rumbo más claro", "next_scene": "regreso_con_rumbo", "effects": {"happiness": 10, "charisma": 5, "discipline": 5, "creativity": 5, "net_worth": -100}}
+      ],
+      "ending": false
+    },
+    "negocio_moderno": {
+      "title": "Un socio inesperado",
+      "text": "Convenciste a tu tío con números, no con promesas. Un año después el letrero dice tu nombre junto al suyo. No es la vida que imaginabas a los dieciocho, pero es tuya, construida ladrillo a ladrillo, y eso también cuenta como un sueño cumplido.",
+      "memory_moment": {"category": "hito_profesional"},
+      "options": [],
+      "ending": true,
+      "ending_id": "socio-del-negocio-familiar"
+    },
+    "rutina_comoda": {
+      "title": "La paz de lo conocido",
+      "text": "No pediste más y el negocio siguió igual. Hay una paz específica en saber exactamente qué va a pasar mañana. Algunos días extrañas no saber; la mayoría, agradeces no tener que averiguarlo.",
+      "options": [],
+      "ending": true,
+      "ending_id": "vida-tranquila"
+    },
+    "renuncia_temprana": {
+      "title": "Sin llaves, sin plan",
+      "text": "Le devolviste las llaves a tu tío con más miedo que certeza. No sabes todavía qué sigue. Pero por primera vez desde la graduación, la pregunta '¿y ahora qué?' se siente como una puerta y no como una condena.",
+      "options": [],
+      "ending": true,
+      "ending_id": "recomenzar-de-cero"
+    },
+    "graduado_exigente": {
+      "title": "Graduado, y un poco solo",
+      "text": "Te graduaste con el promedio más alto de tu generación y casi ningún nombre nuevo en tu agenda. El diploma pesa distinto cuando lo sostienes solo. No te arrepientes del esfuerzo — pero te preguntas cuánto de ti quedó en el camino para conseguirlo.",
+      "memory_moment": {"category": "hito_educativo"},
+      "options": [],
+      "ending": true,
+      "ending_id": "graduado-con-honores-y-solo"
+    },
+    "equilibrio_fragil": {
+      "title": "El equilibrio que sí sostuvo",
+      "text": "Te graduaste tarde, cansado, y con una deuda que vas a pagar por años. También te graduaste con amigos que te ayudaron a sostenerte, un jefe que te escribió una carta de recomendación de verdad, y la certeza de que sí se puede, aunque nadie te dijo que sería así de difícil.",
+      "memory_moment": {"category": "hito_educativo"},
+      "options": [],
+      "ending": true,
+      "ending_id": "equilibrio-fragil"
+    },
+    "camino_interrumpido": {
+      "title": "Un camino interrumpido",
+      "text": "Volviste a casa con las cajas sin desempacar del todo y la sensación de haber fallado algo que ni siquiera elegiste del todo. No es el final de la historia, aunque en este momento se sienta así. Es, simplemente, el final de este intento particular.",
+      "options": [],
+      "ending": true,
+      "ending_id": "un-camino-interrumpido"
+    },
+    "socio_inversionista": {
+      "title": "Éxito con condiciones",
+      "text": "El dinero del socio resolvió en una tarde lo que a ti te habría tomado dos años. También significó ceder la mitad de cada decisión, incluidas las que antes eran tuyas por completo. El negocio ahora es más grande, más sólido, y un poco menos tuyo. No sabes todavía si valió la pena — sabes que ya no puedes deshacerlo.",
+      "options": [],
+      "ending": true,
+      "ending_id": "exito-con-condiciones"
+    },
+    "pequeno_pero_mio": {
+      "title": "Pequeño, pero tuyo",
+      "text": "Rechazaste dos ofertas para crecer y te quedaste con algo que cabe entero en tus manos. No es el imperio que a veces imaginas en voz baja. Es un negocio que reconoces por completo cuando llegas cada mañana, y eso, para ti, vale más de lo que cualquier balance puede mostrar.",
+      "options": [],
+      "ending": true,
+      "ending_id": "pequeno-pero-mio"
+    },
+    "expansion_arriesgada": {
+      "title": "Crecimiento a medias",
+      "text": "Creciste más rápido de lo que tu cuerpo o tus finanzas estaban listos para sostener. Al final del año el negocio es más grande — y tú, mucho más cansado de lo que esperabas. Ganaste la apuesta, a medias. Todavía estás calculando cuánto costó exactamente.",
+      "options": [],
+      "ending": true,
+      "ending_id": "crecimiento-a-medias"
+    },
+    "vida_en_el_camino": {
+      "title": "Vida en el camino",
+      "text": "Nunca volviste 'para quedarte'. Tu dirección postal cambia más seguido que tu ropa de invierno, y a tu familia le cuesta explicar en las reuniones a qué te dedicas exactamente. Tú, la mayoría de las noches, no cambiarías nada. Las otras, extrañas tener un lugar fijo al que llamar tuyo.",
+      "options": [],
+      "ending": true,
+      "ending_id": "vida-en-el-camino"
+    },
+    "regreso_con_rumbo": {
+      "title": "De vuelta, con rumbo",
+      "text": "Volviste con menos dinero del que te fuiste y con una idea mucho más clara de qué querías construir. Nadie en casa entendió del todo el viaje hasta que te vieron empezar algo nuevo, con una calma que antes no tenías. A veces perderse un tiempo es la única forma de encontrar hacia dónde ir.",
+      "options": [],
+      "ending": true,
+      "ending_id": "regreso-con-rumbo"
+    }
+  }
+}

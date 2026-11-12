@@ -1,0 +1,5 @@
+# Contenido narrativo real de objetos (definiciones, no inventario
+# de un jugador — eso es models/inventory.py + el futuro
+# inventory_service.py). JSON de solo lectura, se versiona
+# normalmente. config/paths.py::ITEMS_DIR apunta aquí, pero ningún
+# repositorio/servicio la lee todavía.

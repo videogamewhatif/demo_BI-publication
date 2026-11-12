@@ -1,0 +1,158 @@
+{
+  "_aviso": "DEMO TEMPORAL - ELIMINAR CUANDO SE INTEGRE LA API DE IA. Contenido narrativo estatico escrito a mano para la demo de presentacion a inversionista. Cuando la IA genere eventos dinamicamente, este archivo (y services/demo_service.py, que es el unico que lo lee) se puede borrar sin tocar data/scenarios/, que es el contenido real del juego.",
+  "title": "El Regalo",
+  "genre": "Thriller / misterio contemporaneo",
+  "setting": "Una gran ciudad, epoca actual",
+  "objective": "Descubrir por que Alex recibio la transferencia",
+  "start_scene": "evento_1",
+  "scenes": {
+    "evento_1": {
+      "title": "La transferencia",
+      "image": "assets/demo/01_transferencia.webp",
+      "text": "Son las 7:14 de la manana.\n\nMientras desayunas, revisas tu telefono y encuentras una notificacion bancaria.\n\n+$500,000\n\nEl concepto de la transferencia unicamente dice:\n\nGRACIAS.\n\nRevisas nuevamente la aplicacion.\n\nEl dinero esta realmente en tu cuenta.\n\nNo reconoces al remitente.",
+      "options": [
+        {"label": "Contactar al banco.", "next_scene": "evento_1_resultado_a", "effects": {"net_worth": 500000}},
+        {"label": "No decir nada y esperar.", "next_scene": "evento_1_resultado_b", "effects": {"net_worth": 500000}}
+      ],
+      "ending": false
+    },
+    "evento_1_resultado_a": {
+      "title": "La transferencia",
+      "image": "assets/demo/01_transferencia.webp",
+      "text": "Alex llama inmediatamente al banco.\n\nDespues de varios minutos verificando la operacion, el ejecutivo responde:\n\n\"La transferencia es valida. Los fondos estan disponibles.\"\n\nCuando preguntas quien realizo la transferencia, el ejecutivo guarda silencio unos segundos.\n\n\"No podemos proporcionarle esa informacion.\"\n\nLa llamada termina.",
+      "options": [
+        {"label": "Continuar", "next_scene": "evento_2"}
+      ],
+      "ending": false
+    },
+    "evento_1_resultado_b": {
+      "title": "La transferencia",
+      "image": "assets/demo/01_transferencia.webp",
+      "text": "Alex decide esperar.\n\nDespues de unos minutos recibe una llamada de un numero desconocido.",
+      "options": [
+        {"label": "Continuar", "next_scene": "evento_2"}
+      ],
+      "ending": false
+    },
+    "evento_2": {
+      "title": "La llamada",
+      "image": "assets/demo/02_llamada.webp",
+      "text": "11:43 AM.\n\nTu telefono comienza a vibrar.\n\nNumero desconocido.\n\nContestas.\n\nDurante varios segundos nadie habla.\n\nFinalmente, una voz dice:\n\n'Preguntar demasiado puede convertir un regalo en un problema.'",
+      "options": [
+        {"label": "Preguntar quien habla.", "next_scene": "evento_2_resultado_a", "effects": {"health": -5}},
+        {"label": "Colgar.", "next_scene": "evento_2_resultado_b", "effects": {"health": -5}}
+      ],
+      "ending": false
+    },
+    "evento_2_resultado_a": {
+      "title": "La llamada",
+      "image": "assets/demo/02_llamada.webp",
+      "text": "Preguntas:\n\n\"¿Quien eres?\"\n\nLa persona responde:\n\n\"Alguien que acaba de cambiar tu vida.\"\n\nAntes de que puedas responder, la llamada termina.\n\nUnos segundos despues recibes un mensaje:\n\n\"Mira debajo de tu puerta.\"",
+      "options": [
+        {"label": "Continuar", "next_scene": "evento_3"}
+      ],
+      "ending": false
+    },
+    "evento_2_resultado_b": {
+      "title": "La llamada",
+      "image": "assets/demo/02_llamada.webp",
+      "text": "Cuelgas inmediatamente.\n\nUnos segundos despues recibes un mensaje:\n\n\"Buena decision. Ahora mira debajo de tu puerta.\"",
+      "options": [
+        {"label": "Continuar", "next_scene": "evento_3"}
+      ],
+      "ending": false
+    },
+    "evento_3": {
+      "title": "El sobre",
+      "image": "assets/demo/03_sobre.webp",
+      "text": "Caminas lentamente hacia la entrada.\n\nDebajo de la puerta hay un sobre negro.\n\nEstas seguro de que no estaba ahi hace unos minutos.\n\nLo abres.\n\nDentro solamente hay una tarjeta.\n\nUna direccion.\n\n8:00 PM.\n\nY una frase:\n\n'Puedes quedarte con el dinero.\n\nO puedes descubrir por que lo recibiste.'",
+      "options": [
+        {"label": "Ir a la direccion.", "next_scene": "evento_3_resultado_a", "effects": {"health": -5}},
+        {"label": "Quedarme en casa.", "next_scene": "evento_3_resultado_b", "effects": {"health": -5}}
+      ],
+      "ending": false
+    },
+    "evento_3_resultado_a": {
+      "title": "El sobre",
+      "image": "assets/demo/03_sobre.webp",
+      "text": "Decides averiguar que esta ocurriendo.\n\nA las 7:30 PM sales de casa y escribes la direccion en el GPS.\n\nEsta en una antigua zona industrial de la ciudad.",
+      "options": [
+        {"label": "Continuar", "next_scene": "evento_4"}
+      ],
+      "ending": false
+    },
+    "evento_3_resultado_b": {
+      "title": "El sobre",
+      "image": "assets/demo/03_sobre.webp",
+      "text": "Decides no ir.\n\nA las 8:01 PM recibes un nuevo mensaje:\n\n\"Sabiamos que tendrias miedo.\"\n\nDebajo aparece nuevamente la direccion.\n\nAlex cambia de opinion.",
+      "options": [
+        {"label": "Continuar", "next_scene": "evento_4"}
+      ],
+      "ending": false
+    },
+    "evento_4": {
+      "title": "El edificio",
+      "image": "assets/demo/04_edificio.webp",
+      "text": "7:58 PM.\n\nLlegas a la direccion.\n\nFrente a ti hay un antiguo edificio industrial.\n\nNo tiene letreros.\n\nNo hay automoviles.\n\nNo parece haber nadie dentro.\n\nA las 8:00 PM exactamente, una luz se enciende en el tercer piso.\n\nTu telefono vibra.\n\nUn nuevo mensaje:\n\n'Entra.'",
+      "options": [
+        {"label": "Entrar al edificio.", "next_scene": "evento_4_resultado_a", "effects": {"reputation": 5}},
+        {"label": "Intentar llamar al numero.", "next_scene": "evento_4_resultado_b", "effects": {"reputation": 5}}
+      ],
+      "ending": false
+    },
+    "evento_4_resultado_a": {
+      "title": "El edificio",
+      "image": "assets/demo/04_edificio.webp",
+      "text": "Empujas la puerta.\n\nEsta abierta.\n\nDentro solamente hay un pasillo iluminado.\n\nAl final encuentras un elevador.\n\nCuriosamente, solo tiene un boton.\n\nLo presionas.",
+      "options": [
+        {"label": "Continuar", "next_scene": "evento_5"}
+      ],
+      "ending": false
+    },
+    "evento_4_resultado_b": {
+      "title": "El edificio",
+      "image": "assets/demo/04_edificio.webp",
+      "text": "Intentas llamar.\n\nUna grabacion responde:\n\n\"Las respuestas estan dentro.\"\n\nLa llamada termina.\n\nAlex decide entrar.",
+      "options": [
+        {"label": "Continuar", "next_scene": "evento_5"}
+      ],
+      "ending": false
+    },
+    "evento_5": {
+      "title": "La habitacion",
+      "image": "assets/demo/05_pantallas.webp",
+      "text": "Las puertas del elevador se abren.\n\nFrente a ti hay una habitacion completamente oscura.\n\nDas un paso.\n\nDecenas de pantallas se encienden al mismo tiempo.\n\nEn ellas aparecen fotografias tuyas.\n\nTu casa.\n\nTu trabajo.\n\nLugares que visitaste durante las ultimas semanas.\n\nFinalmente todas las pantallas se apagan excepto una.\n\nAparece una pregunta:\n\n¿QUIERES SABER POR QUE FUISTE ELEGIDO?",
+      "options": [
+        {"label": "Si.", "next_scene": "evento_5_resultado_a"},
+        {"label": "Salir de aqui.", "next_scene": "evento_5_resultado_b"}
+      ],
+      "ending": false
+    },
+    "evento_5_resultado_a": {
+      "title": "La habitacion",
+      "image": "assets/demo/05_pantallas.webp",
+      "text": "Alex selecciona:\n\nSI.\n\nLa habitacion queda completamente oscura.\n\nDespues de unos segundos, la pantalla principal vuelve a encenderse.",
+      "options": [
+        {"label": "Continuar", "next_scene": "final_demo"}
+      ],
+      "ending": false
+    },
+    "evento_5_resultado_b": {
+      "title": "La habitacion",
+      "image": "assets/demo/05_pantallas.webp",
+      "text": "Alex intenta regresar al elevador.\n\nLas puertas no se abren.\n\nLa pantalla cambia:\n\n\"Ya tomaste la decision cuando entraste.\"",
+      "options": [
+        {"label": "Continuar", "next_scene": "final_demo"}
+      ],
+      "ending": false
+    },
+    "final_demo": {
+      "title": "Sujeto aceptado",
+      "image": "assets/demo/05_pantallas.webp",
+      "text": "Las pantallas parpadean una ultima vez.\n\nEn la pantalla principal aparece un mensaje:\n\nANALIZANDO DECISIONES...\n\nUnos segundos despues:\n\nPERFIL COMPLETADO\n\nFinalmente, en letras grandes:\n\nSUJETO ACEPTADO",
+      "options": [],
+      "ending": true,
+      "ending_id": "demo-sujeto-aceptado"
+    }
+  }
+}

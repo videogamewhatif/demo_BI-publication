@@ -1,0 +1,115 @@
+# =====================================================
+# What If?
+# Runtime + Development Dependencies
+#
+# Install:
+#     python -m pip install -r requirements.txt
+#
+# Python Version:
+#     >=3.10 (probado y ajustado para 3.14.4)
+#
+# Generado a partir de un escaneo real de imports del código
+# (main.py, ai/, config/, database/, engine/, managers/, models/,
+# services/, ui/, utils/, test/) — no de la documentación de diseño.
+# Cada dependencia listada aquí se importa de verdad en al menos un
+# archivo .py del proyecto.
+# =====================================================
+
+# ===============================
+# INTERFAZ (obligatoria — main.py no arranca sin esto)
+# ===============================
+
+PySide6>=6.10.0,<7.0.0
+
+# ===============================
+# IMÁGENES (funcionalidad — managers/resource_manager.py y
+# services/image_service.py la importan de forma perezosa; su
+# ausencia no impide arrancar el juego, pero sí deshabilita la carga
+# de íconos/imágenes/fuentes y la generación de imágenes placeholder)
+# ===============================
+
+Pillow>=12.0.0,<13.0.0
+
+# ===============================
+# AUDIO (funcionalidad — services/audio_service.py la importa de
+# forma perezosa dentro de PygameAudioBackend; sin ella, el audio
+# queda deshabilitado con un aviso en el log, el resto del juego
+# sigue funcionando con normalidad, confirmado en pruebas)
+#
+# Se usa "pygame-ce" (pygame Community Edition), NO "pygame":
+# pygame clásico todavía no publica builds para Python 3.14 (falla
+# compilando desde código fuente por falta de "sdl-config", que es
+# exactamente el error reportado). pygame-ce es un reemplazo binario
+# 100% compatible — se importa igual (`import pygame`), así que el
+# código de audio_service.py no necesita ningún cambio.
+# ===============================
+
+pygame-ce>=2.5.7,<3.0.0
+
+# ===============================
+# GENERACIÓN DE IMÁGENES POR IA (funcionalidad opcional — solo la
+# usa services/image_service.py::OpenAIImageProvider, con import
+# perezoso; nada del proyecto instancia este proveedor todavía)
+#
+# Fijado a la serie 1.x a propósito: existe una serie 2.x más
+# reciente, pero es un cambio de versión mayor y no se verificó que
+# `client.images.generate()` / `client.images.edit()` (los métodos
+# que usa image_service.py) sigan funcionando igual ahí. Subir de
+# mayor de versión es una decisión de código, no de este archivo.
+# ===============================
+
+openai>=1.99.9,<2.0.0
+
+# ===============================
+# PERSISTENCIA RELACIONAL (backend SQLAlchemy en database/, activado
+# de verdad por main.py para SaveService/StatisticsService/
+# InventoryService/AchievementService — ver docs/architecture.md,
+# sección 5. StoryService y EndingManager siguen sobre JSON)
+# ===============================
+
+SQLAlchemy>=2.0.51,<3.0.0
+
+# ===============================
+# POSTGRES REMOTO (opcional — solo la usa database/engine.py cuando
+# SUPABASE_DB_URL está configurada en el entorno; sin ella,
+# create_database_engine() sigue usando SQLite local y esta
+# dependencia ni se importa. Necesaria para que SQLAlchemy hable con
+# la Postgres que da Supabase)
+# ===============================
+
+psycopg2-binary>=2.9.9,<3.0.0
+
+# ===============================
+# CUENTAS DE USUARIO (opcional — solo la usa
+# services/auth_service.py::AuthService, con import perezoso; sin
+# SUPABASE_URL/SUPABASE_ANON_KEY en el entorno, main.py nunca
+# instancia AuthService y esta dependencia ni se importa)
+# ===============================
+
+supabase>=2.10.0,<3.0.0
+
+# ===============================
+# CARGA DE .env (funcionalidad — lee SUPABASE_URL/SUPABASE_ANON_KEY/
+# SUPABASE_DB_URL desde un archivo .env en la raíz al arrancar
+# main.py; sin un .env presente, simplemente no hay nada que cargar y
+# el juego sigue arrancando en modo local)
+# ===============================
+
+python-dotenv>=1.0.1,<2.0.0
+
+# ===============================
+# TESTING (desarrollo — solo la usa tests/, nunca main.py)
+# ===============================
+
+pytest>=8.4.1,<9.0.0
+pytest-cov>=6.2.1,<7.0.0
+
+# ===============================
+# FORMATO / IMPORTS / LINT / TIPOS (desarrollo — herramientas de
+# línea de comandos, ningún archivo del juego las importa)
+# ===============================
+
+black>=25.1.0
+isort>=6.0.1
+ruff>=0.13.0
+mypy>=1.17.1

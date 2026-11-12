@@ -1,0 +1,4 @@
+# Datos narrativos de personajes/NPCs (no imágenes — ver
+# assets/images/characters/ para eso). JSON de solo lectura, se
+# versiona normalmente. config/paths.py::CHARACTERS_DIR apunta aquí,
+# pero ningún repositorio/servicio la lee todavía.

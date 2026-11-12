@@ -1,0 +1,3 @@
+# Contenido narrativo real (eventos), igual que data/scenarios/ —
+# JSON de solo lectura, se versiona normalmente. config/paths.py::EVENTS_DIR
+# apunta aquí, pero ningún repositorio/servicio la lee todavía.
